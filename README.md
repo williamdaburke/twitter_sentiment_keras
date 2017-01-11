@@ -20,29 +20,26 @@ For example, to access the character Peter Baelish, the full request would be ht
 
 We would like you to answer the following:
 
-  a) What index corresponds to the house “House Breakstone”?
+a) What index corresponds to the house “House Breakstone”?
  
-  b) How many males, females and unknown genders are there in the first 40 characters? Note, index 0 does not correspond to a character, so full range is 1 - 40 both ends inclusive. 
+b) How many males, females and unknown genders are there in the first 40 characters? Note, index 0 does not correspond to a character, so full range is 1 - 40 both ends inclusive. 
 
-  c) How many books can be accessed from this API?
+c) How many books can be accessed from this API?
 
-  d) How many books does the character ‘High Septon’ appear in? (ignoring ‘povcharacters’) 
+d) How many books does the character ‘High Septon’ appear in? (ignoring ‘povcharacters’) 
 
 Hint: index value of Septon needs to be found first; it is smaller than 20.
 
-* Download and install [miniconda](http://conda.pydata.org/miniconda.html) or anaconda
+__File type manipulation and formatting__
 
-* Create a virtual environment (NOTE: python 3!)
-  
-  ```
-  $ conda create -n miniconometrics python=3 --file requirements_conda.txt
-  ```
+Three files are presented, one CSV, one TXT and one JSON file. Each contain 1000 rows of data. There are two challenges, both involving collating these files into one data frame. The fields in all files are:
 
-__Configure__
+'author.properties.friends',  'author.properties.status_count',  'author.properties.verified',  'content.body',  'location.country',  'properties.platform',  'properties.sentiment',  'location.latitude',  'location.longitude'
 
-  The configuration highly depends on the available master input data, modify config.py
-  to make miniconometrics understand its contents. config.py is meant to be self explanatory.
+where the ‘.’ Indicates a nested field.
+ 
+a) Begin by collating the CSV and TXT files together into one pandas dataframe. The resulting dataframe should be 2000 rows and have all of the columns present in both files.
 
-__Run__
+b) Next, using the created dataframe, append the JSON data to it. The resulting dataframe should now be 3000 rows long and containing all of the columns in all three files. Translating the nestedness from JSON to the dataframe is up to you. However, ideally the transformation will have as little information loss as possible. 
 
-* activate the environment
+This means that for a given nested field, say - person { name : “Bob”, age : 30} - , the resulting dataframe would have a column person.name and person.age or person_name and person_age etc.
