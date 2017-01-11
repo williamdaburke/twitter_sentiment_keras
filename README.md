@@ -20,13 +20,13 @@ For example, to access the character Peter Baelish, the full request would be ht
 
 We would like you to answer the following:
 
-a) What index corresponds to the house “House Breakstone”?
+  a) What index corresponds to the house “House Breakstone”?
  
-b) How many males, females and unknown genders are there in the first 40 characters? Note, index 0 does not correspond to a character, so full range is 1 – 40 both ends inclusive. 
+  b) How many males, females and unknown genders are there in the first 40 characters? Note, index 0 does not correspond to a character, so full range is 1 - 40 both ends inclusive. 
 
-c) How many books can be accessed from this API?
+  c) How many books can be accessed from this API?
 
-d) How many books does the character ‘High Septon’ appear in? (ignoring ‘povcharacters’) 
+  d) How many books does the character ‘High Septon’ appear in? (ignoring ‘povcharacters’) 
 
 Hint: index value of Septon needs to be found first; it is smaller than 20.
 
