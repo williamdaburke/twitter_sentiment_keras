@@ -18,6 +18,8 @@ Where SECTION can be either ‘books’, ‘characters’, or ‘houses’ and I
 
 For example, to access the character Peter Baelish, the full request would be http://anapioficeandfire.com/api/characters/823, where 823 is the index corresponding to that character. 
 
+It's recommended to read the full documentation, which can be found here: https://anapioficeandfire.com/Documentation
+
 We would like you to answer the following:
 
 a) What index corresponds to the house “House Breakstone”?
@@ -40,6 +42,6 @@ where the ‘.’ Indicates a nested field.
  
 a) Begin by collating the CSV and TXT files together into one pandas dataframe. The resulting dataframe should be 2000 rows and have all of the columns present in both files.
 
-b) Next, using the created dataframe, append the JSON data to it. The resulting dataframe should now be 3000 rows long and containing all of the columns in all three files. Translating the nestedness from JSON to the dataframe is up to you. However, ideally the transformation will have as little information loss as possible. 
+b) Next, using the created dataframe, append the JSON data to it. The resulting dataframe should now be 3000 rows long and containing all of the columns in all three files.
 
 This means that for a given nested field, say - person { name : “Bob”, age : 30} - , the resulting dataframe would have a column person.name and person.age or person_name and person_age etc.
