@@ -42,9 +42,7 @@ where the ‘.’ Indicates a nested field.
  
 a) Begin by collating the CSV and TXT files together into one pandas dataframe. The resulting dataframe should be 2000 rows and have all of the columns present in both files.
 
-b) Next, using the created dataframe, append the JSON data to it. The resulting dataframe should now be 3000 rows long and containing all of the columns in all three files.
-
-This means that for a given nested field, say - person { name : “Bob”, age : 30} - , the resulting dataframe would have a column person.name and person.age or person_name and person_age etc.
+b) Next, using the created dataframe, integrate the data from the JSON file into the existing columns. The resulting dataframe should now be 3000 rows long.
 
 __Summary of the data__
 
