@@ -45,3 +45,17 @@ a) Begin by collating the CSV and TXT files together into one pandas dataframe. 
 b) Next, using the created dataframe, append the JSON data to it. The resulting dataframe should now be 3000 rows long and containing all of the columns in all three files.
 
 This means that for a given nested field, say - person { name : “Bob”, age : 30} - , the resulting dataframe would have a column person.name and person.age or person_name and person_age etc.
+
+__Summary of the data__
+
+Using the created pandas dataframe, describe the variables within it. Produce summary plots, tables or statistics which best describe the data. 
+
+This is a general task and can be taken in many ways. The key is to inform us about what we should know if we were to base analysis or model creation on top of it.
+
+__Model creation__
+
+This next step involves creating a predictive model for a response variable, given a set of features. The task is to create a predictive model for the variable ‘properties.sentiment’ using the remaining features in the data set. 
+
+If task one has been completed, then please create the model with all three data files (3000 rows in total). If not, any selection of rows from the three files is suitable. 
+
+What we would like to see from this task is your thoughts and decisions on training a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods. A general, simple explanation is all that is required; no mathematical proofs or theorem recitals are necessary!
