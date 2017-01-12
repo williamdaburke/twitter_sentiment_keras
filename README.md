@@ -44,11 +44,9 @@ a) Begin by collating the CSV and TXT files together into one pandas dataframe. 
 
 b) Next, using the created dataframe, integrate the data from the JSON file into the existing columns. The resulting dataframe should now be 3000 rows long.
 
-__Summary of the data__
+__Data exploration__
 
-Using the created pandas dataframe, describe the variables within it. Produce summary plots, tables or statistics which best describe the data. 
-
-This is a general task and can be taken in many ways. The key is to inform us about what we should know if we were to base analysis or model creation on top of it.
+In this challenge we would like to know something interesting about the data. You are free to explore as you wish, producing plots, tables, statistics, etc. Feel free to use any variables in the dataset or include external data you may consider relevant to complement your analysis.  
 
 __Model creation__
 
