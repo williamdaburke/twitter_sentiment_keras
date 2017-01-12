@@ -54,6 +54,6 @@ This final task involves creating a predictive model for a response variable, gi
 
 The data files attached should be used to create the model.  
 
-What we would like to see from this task is your thoughts and decisions on training a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. 
+What we would like to see from this task is your thoughts and decisions on training and testing a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. 
 
-This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods. A general, simple explanation is all that is required; no mathematical proofs or theorem recitals are necessary!
+This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods and models you are using.
