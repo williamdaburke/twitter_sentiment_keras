@@ -54,8 +54,10 @@ This is a general task and can be taken in many ways. The key is to inform us ab
 
 __Model creation__
 
-This next step involves creating a predictive model for a response variable, given a set of features. The task is to create a predictive model for the variable ‘properties.sentiment’ using the remaining features in the data set. 
+This final task involves creating a predictive model for a response variable, given a set of features. The task is to create a predictive model for the variable ‘properties.sentiment’ using the remaining features in the data set. 
 
-If task one has been completed, then please create the model with all three data files (3000 rows in total). If not, any selection of rows from the three files is suitable. 
+The data files attached should be used to create the model.  
 
-What we would like to see from this task is your thoughts and decisions on training a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods. A general, simple explanation is all that is required; no mathematical proofs or theorem recitals are necessary!
+What we would like to see from this task is your thoughts and decisions on training a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. 
+
+This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods. A general, simple explanation is all that is required; no mathematical proofs or theorem recitals are necessary!
