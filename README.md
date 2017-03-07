@@ -2,7 +2,7 @@
 
 First, before delving into the challenges, we would like to explain that we use version control and virtual environments in our work. We think they are essential to produce good quality stuff and it helps us a lot! So we expect you do the same whlist working on these challenges. Please commit several times as your work progress with meaningful comments and create a requirements file so we can see what you are working with.
 
-Your end result should be scripts (suitably commented) written in Python (2 or 3) that anyone can easily run. The way you organise them it's up to you.
+Your end result should be scripts (suitably commented) written in Python (2 or 3) that anyone can easily run, i.e., they need to be a **working solution**. The way you organise them it's up to you.
  
 Now, as for the challenges, you find the data you need in the "data" folder and should be comprised of 3 files: csv_file.csv, json_file.json, txt_file.txt
 
