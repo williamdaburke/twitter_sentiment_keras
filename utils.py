@@ -26,7 +26,7 @@ def load_combined_df():
     #check sizes
     assert(txt_df.shape==json_df.shape)
     
-    combined_df = pd.concat([combined_df,json_df])
+    combined_df = pd.concat([combined_df,json_df]).reset_index(drop=True)
     print('\ndf shape: ',combined_df.shape)
    
     return combined_df
@@ -34,8 +34,8 @@ def load_combined_df():
 def preprocess_values(df):
     print('\nrows with null values: ',df[df.isnull().any(axis=1)].index)
 
-    #delete row 552 which has no good data 
-    df = df.drop([552],axis=0)
+    #delete row 1552 which has no good data 
+    df = df.drop([1552],axis=0)
     
     #basically all entries platform is twitter,
     #print('\ntypes of platforms: ',df['properties.platform'].value_counts())
