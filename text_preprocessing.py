@@ -14,6 +14,8 @@ def remove_punctuaction(x):
         return ' '.join(x.translate(__STRING_TABLE).split())
 
 def preprocess_text(text):
+    text = re.sub('@[^\s]+', 'ATUSERVARIABLE', text) # remove usernames
+    tweet = re.sub(r'#([^\s]+)', r'\1', text) # remove the # in #hashtag
     return replace_typical_misspell(remove_whitespace(deEmojify(clean_numbers(remove_punctuaction(text.strip().lower())))))  
 
 def remove_whitespace(text):
