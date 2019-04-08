@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import json
+import json, re
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
@@ -75,3 +75,5 @@ def normalize(df,cols_to_normalize=None):
         min_value = df[feature_name].min()
         df[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
     return df
+
+
