@@ -32,17 +32,19 @@ def load_combined_df():
     return combined_df
 
 def preprocess_values(df):
-    print('\nrows with null values: ',df[df.isnull().any(axis=1)])
+    print('\nrows with null values: ',df[df.isnull().any(axis=1)].index)
 
     #delete row 552 which has no good data 
     df = df.drop([552],axis=0)
-
+    
     #basically all entries platform is twitter,
-    print('\ntypes of platforms: ',df['properties.platform'].value_counts())
-    print('\nrows that arent twitter: ',df[~(df['properties.platform'] == 'twitter')].shape)
+    #print('\ntypes of platforms: ',df['properties.platform'].value_counts())
+    print('rows that arent twitter: ',df[~(df['properties.platform'] == 'twitter')].shape[0])
 
     #therefore this column can be dropped.
     df = df.drop(['properties.platform'],axis=1)
+    
+    print('\ndropped one row, fixed other null by dropping platform col, as unneeded')
 
     assert(df[df.isnull().any(axis=1)].empty)
 
@@ -53,8 +55,8 @@ def preprocess_values(df):
 
     #most users are from UK
     print('\n country breakdown: ',df['location.country'].value_counts())
-    plt.rcParams['figure.figsize'] = [5,3]
-    df['location.country'][df['location.country']!='GB'].value_counts().plot(kind='bar')
+
+    print('\ndf shape: ',df.shape)
     return df
     
 
