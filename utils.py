@@ -62,16 +62,16 @@ def preprocess_values(df):
 
 def encode_labels(df,cat_columns):
     for col in cat_columns:
-        print(col)
+        print('encoded:',col)
         lbl = LabelEncoder()
         lbl.fit(list(df[col].values.astype('str')))
         df[col] = lbl.transform(list(df[col].values.astype('str')))
     return df
 
-def normalize(df):
-    result = df.copy()
-    for feature_name in df.columns:
+def normalize(df,cols_to_normalize=None):
+    cols = cols_to_normalize if cols_to_normalize else df.columns
+    for feature_name in cols:
         max_value = df[feature_name].max()
         min_value = df[feature_name].min()
-        result[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
-    return result
+        df[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
+    return df
