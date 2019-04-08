@@ -28,32 +28,35 @@ def load_combined_df():
     
     combined_df = pd.concat([combined_df,json_df])
     print('\ndf shape: ',combined_df.shape)
+   
+    return combined_df
 
-    print('\nrows with null values: ',combined_df[combined_df.isnull().any(axis=1)])
+def preprocess_values(df):
+    print('\nrows with null values: ',df[df.isnull().any(axis=1)])
 
     #delete row 552 which has no good data 
-    combined_df = combined_df.drop([552],axis=0)
+    df = df.drop([552],axis=0)
 
     #basically all entries platform is twitter,
-    print('\ntypes of platforms: ',combined_df['properties.platform'].value_counts())
-    print('\nrows that arent twitter: ',combined_df[~(combined_df['properties.platform'] == 'twitter')].shape)
+    print('\ntypes of platforms: ',df['properties.platform'].value_counts())
+    print('\nrows that arent twitter: ',df[~(df['properties.platform'] == 'twitter')].shape)
 
     #therefore this column can be dropped.
-    combined_df = combined_df.drop(['properties.platform'],axis=1)
+    df = df.drop(['properties.platform'],axis=1)
 
-    assert(combined_df[combined_df.isnull().any(axis=1)].empty)
+    assert(df[df.isnull().any(axis=1)].empty)
 
     #convert friends to numeric
-    combined_df['author.properties.friends'] = combined_df['author.properties.friends'].astype(int)
+    df['author.properties.friends'] = df['author.properties.friends'].astype(int)
     #check to see converted
-    print('\ntype of friends col: ',combined_df['author.properties.friends'].infer_objects().dtype)
+    print('\ntype of friends col: ',df['author.properties.friends'].infer_objects().dtype)
 
     #most users are from UK
-    print('\n country breakdown: ',combined_df['location.country'].value_counts())
+    print('\n country breakdown: ',df['location.country'].value_counts())
     plt.rcParams['figure.figsize'] = [5,3]
-    combined_df['location.country'][combined_df['location.country']!='GB'].value_counts().plot(kind='bar')
+    df['location.country'][df['location.country']!='GB'].value_counts().plot(kind='bar')
+    return df
     
-    return combined_df
 
 def encode_labels(df,cat_columns):
     for col in cat_columns:
