@@ -2,8 +2,13 @@
 
 import json, re
 import pandas as pd
+import numpy as np
+from numpy import isneginf
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
+import math
+from emoji.unicode_codes import UNICODE_EMOJI
+
     
 def load_combined_df():    
     #script to return combined dataframe of txt csv and json data files.
@@ -76,4 +81,15 @@ def normalize(df,cols_to_normalize=None):
         df[feature_name] = (df[feature_name] - min_value) / (max_value - min_value)
     return df
 
+def normalize_col(col):
+    max_value = col.max()
+    min_value = col.min()
+    return (col - min_value) / (max_value - min_value)
 
+def sigmoid(x):
+    return 1 / (1 + math.exp(-x))
+
+def get_log(col):   
+    x = np.log(col)
+    x[isneginf(x)]=0
+    return x
