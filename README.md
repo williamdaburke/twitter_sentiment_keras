@@ -56,4 +56,4 @@ The data files attached should be used to create the model.
 
 What we would like to see from this task is your thoughts and decisions on training and testing a model. This will include, but not limited to, considering aspects such as feature selection & creation, parameter tuning of the model and train / validation / test split. 
 
-This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods and models you are using.
+This task is a blank canvas to work with. The only caveat is that you must be able to explain the methods and models you are using.# twitter_sentiment_keras_bitbucket
