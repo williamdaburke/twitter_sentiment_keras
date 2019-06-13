@@ -27,6 +27,7 @@ def preprocess_text(text):
     text = text.replace(":)"," happy ")
     text = text.replace(":("," unhappy ")
     text = text.replace(":-)"," happy ")
+    text = text.replace(";D"," funny ")
     text = text.replace(" XD "," funny ")
     text = text.replace("<3"," love ")
     text = re.sub('@[^\s]+', 'USERVARIABLE', text) # remove usernames
