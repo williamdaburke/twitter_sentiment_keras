@@ -10,7 +10,7 @@ Keras-Preprocessing==1.0.8
 matplotlib==2.2.3
 nltk==3.3
 notebook==5.7.0
-numpy==1.15.3
+numpy==1.22.0
 overrides==1.9
 packaging==19.0
 pandas==0.23.4
